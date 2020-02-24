@@ -1,0 +1,174 @@
+// General margin/padding/positioning variables
+$pos-tiny-value: 5px;
+$pos-small-value: 10px;
+$pos-semi-medium-value: 15px;
+$pos-medium-value: 20px;
+$pos-large-value: 30px;
+
+// Margins
+.tiny-margin-left {
+  margin-left: $pos-tiny-value !important;
+}
+
+.tiny-margin-right {
+  margin-right: $pos-tiny-value !important;
+}
+
+.tiny-margin-top {
+  margin-top: $pos-tiny-value !important;
+}
+
+.tiny-margin-bottom {
+  margin-bottom: $pos-tiny-value !important;
+}
+
+.small-margin-left {
+  margin-left: $pos-small-value !important;
+}
+
+.small-margin-right {
+  margin-right: $pos-small-value !important;
+}
+
+.small-margin-top {
+  margin-top: $pos-small-value !important;
+}
+
+.small-margin-bottom {
+  margin-bottom: $pos-small-value !important;
+}
+
+.medium-margin-left {
+  margin-left: $pos-medium-value !important;
+}
+
+.medium-margin-right {
+  margin-right: $pos-medium-value !important;
+}
+
+.medium-margin-top {
+  margin-top: $pos-medium-value !important;
+}
+
+.medium-margin-bottom {
+  margin-bottom: $pos-medium-value !important;
+}
+
+.large-margin-left {
+  margin-left: $pos-large-value !important;
+}
+
+.large-margin-right {
+  margin-right: $pos-large-value !important;
+}
+
+.large-margin-top {
+  margin-top: $pos-large-value !important;
+}
+
+.large-margin-bottom {
+  margin-bottom: $pos-large-value !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-margin-right {
+  margin-right: 0 !important;
+}
+
+.no-margin-left {
+  margin-left: 0 !important;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.no-margin-hor {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+// Paddings
+.tiny-padding-left {
+  padding-left: $pos-tiny-value !important;
+}
+
+.tiny-padding-right {
+  padding-right: $pos-tiny-value !important;
+}
+
+.tiny-padding-top {
+  padding-top: $pos-tiny-value !important;
+}
+
+.tiny-padding-bottom {
+  padding-bottom: $pos-tiny-value !important;
+}
+
+.medium-padding-left {
+  padding-left: $pos-medium-value !important;
+}
+
+.medium-padding-right {
+  padding-right: $pos-medium-value !important;
+}
+
+.small-padding-top {
+  padding-top: $pos-small-value !important;
+}
+
+.medium-padding-top {
+  padding-top: $pos-medium-value;
+}
+
+.medium-padding-bottom {
+  padding-bottom: $pos-medium-value !important;
+}
+
+.small-padding-bottom {
+  padding-bottom: $pos-small-value !important;
+}
+
+.large-padding-bottom {
+  padding-bottom: $pos-large-value !important;
+}
+
+.large-padding-top {
+  padding-top: $pos-large-value !important;
+}
+
+.large-padding-right {
+  padding-right: $pos-large-value !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.no-padding-hor {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}

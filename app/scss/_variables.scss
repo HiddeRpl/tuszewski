@@ -1,0 +1,29 @@
+// Colors
+$white: #fff;
+$black: #000;
+
+$primary-color: #081951;
+$primary-color-lighter: #f2f2f2;
+$secondary-color: #897049;
+$secondary-color-lighter: #b39361;
+
+$text-color: $black;
+$text-color-alt: #181d4e;
+
+$hamburger-color: $white;
+$hamburger-active-color: #3d416a;
+
+$navbar-border: #6d7c9d;
+
+// Breakpoints
+$screen-xxl-min: 1770px;
+$screen-xl-min: 1200px;
+$screen-xl-max: ($screen-xxl-min - 1);
+$screen-lg-min: 980px;
+$screen-lg-max: ($screen-xl-min - 1);
+$screen-md-min: 768px;
+$screen-md-max: ($screen-lg-min - 1);
+$screen-sm-min: 480px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-xs-min: 320px;
+$screen-xs-max: ($screen-sm-min - 1);

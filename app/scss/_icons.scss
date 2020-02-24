@@ -1,0 +1,39 @@
+.icon-arrow {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border: solid #1a1e4f;
+    border-width: 0 2px 2px 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.icon-arrow-up {
+  &:after {
+    transform: rotate(225deg);
+  }
+}
+
+.icon-arrow-down {
+  &:after {
+    transform: rotate(45deg);
+  }
+}
+
+.icon-arrow-left {
+  &:after {
+    transform: rotate(135deg);
+  }
+}
+
+.icon-arrow-right {
+  &:after {
+    transform: rotate(315deg);
+  }
+}

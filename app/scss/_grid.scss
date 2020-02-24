@@ -1,0 +1,91 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $screen-md-min) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: $screen-xl-min) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-family: 'DINPl-Bold', sans-serif;
+}
+
+.font-regular {
+  font-family: 'DINPl-Regular', sans-serif;
+}
+
+.font-medium {
+  font-family: 'DINPl-Medium', sans-serif;
+}
+
+.font-light {
+  font-family: 'DINPl-Light', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.valign-center {
+  display: flex;
+  align-items: center;
+}
+
+.halign-center {
+  display: flex;
+  justify-content: center;
+}
+
+.halign-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.halign-spbetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
+}
+
+@mixin full-width {
+  margin-left: -15px;
+  margin-right: -15px;
+}
