@@ -3,11 +3,16 @@
 }
 
 html {
+  font-family: "Montserrat-Regular", sans-serif;
   font-size: 14px;
   scroll-behavior: smooth;
   @include screen-sm-max {
     font-size: 12px;
   }
+}
+
+section {
+  padding: 0 40px;
 }
 
 a, button {
@@ -36,6 +41,18 @@ a:hover, a:focus {
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
+}
+
+.accent {
+  color: $accent-color;
+}
+
+.font-bold {
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+
+.font-regular {
+  font-family: 'Montserrat-Regular', sans-serif;
 }
 
 .fade-in {
