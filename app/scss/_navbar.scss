@@ -2,9 +2,17 @@
   display: flex;
   padding: 30px 0;
 
+  @include screen-sm-max {
+    padding: 20px 0;
+  }
+
   &__logo {
     height: 70px;
     width: auto;
+
+    @include screen-sm-max {
+      height: 50px;
+    }
   }
 
   &__links-wrapper {
@@ -14,6 +22,10 @@
     padding: 0;
     display: flex;
     align-items: center;
+
+    @include screen-sm-max {
+      display: none;
+    }
   }
 
   &__link {
@@ -40,6 +52,63 @@
 
     &:hover:after {
       left: 0%;
+    }
+  }
+}
+
+.hamburger {
+  align-self: center;
+  width: 39px;
+  height: 28px;
+  border: 0;
+  border-top: 2px solid $accent-color;
+  background-color: transparent;
+  transition: 0.3s transform ease;
+  position: relative;
+  display: none;
+  margin-left: 30px;
+  cursor: pointer;
+
+  @include screen-sm-max {
+    display: block;
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid $accent-color;
+    transform: translateY(24px);
+    transition: 0.3s all ease;
+  }
+
+  &:after {
+    transform: translateY(11px);
+  }
+
+  &.active {
+    z-index: 2;
+    transform: rotate(45deg);
+    border: none;
+    margin: 0;
+    width: 31px;
+    height: 22px;
+    right: 0;
+    top: 0;
+
+    &:after,
+    &:before {
+      border-top: 2px solid $accent-color;
+    }
+
+    &:after {
+      transform: rotate(-90deg) translateX(-9px);
+    }
+
+    &:before {
+      transform: translateY(9px);
     }
   }
 }

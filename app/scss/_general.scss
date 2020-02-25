@@ -11,8 +11,18 @@ html {
   }
 }
 
+body {
+  &.is-menu-active {
+    overflow: hidden;
+  }
+}
+
 section {
   padding: 0 40px;
+
+  @include screen-sm-max {
+    padding: 0 20px;
+  }
 }
 
 a, button {

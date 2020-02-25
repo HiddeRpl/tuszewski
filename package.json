@@ -4,7 +4,7 @@
   "author": "mikolaj.jarmula <mikolaj_jarmula@wp.pl>",
   "license": "ISC",
   "scripts": {
-    "build:prod": "webpack --mode production --config webpack.config.js --progress --colors",
+    "build:prod": "yarn fix && webpack --mode production --config webpack.config.js --progress --colors",
     "build": "webpack --mode development --config webpack.config.js --progress --colors",
     "watch": "webpack --mode development --config webpack.config.js --progress --colors --watch",
     "serve": "webpack-dev-server",
@@ -13,7 +13,7 @@
     "prettier": "prettier \"./**/*.{ts,tsx,scss}\" --write",
     "fix:ts": "yarn lint --fix",
     "fix": "yarn prettier && yarn fix:ts",
-    "deploy": "gh-pages -d dist"
+    "deploy": "yarn run build:prod && gh-pages -d dist"
   },
   "dependencies": {},
   "devDependencies": {
