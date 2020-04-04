@@ -1,0 +1,50 @@
+.about-me {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 80px;
+
+    @include screen-md-max {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  &__image-wrapper {
+    background-image: linear-gradient(
+      135deg,
+      #ffffff 40%,
+      #e74c3c 40%,
+      #e74c3c 50%,
+      #ffffff 50%,
+      #ffffff 90%,
+      #e74c3c 90%,
+      #e74c3c 100%
+    );
+    background-size: 24.04px 24.04px;
+    padding: 0 0 20px 20px;
+
+    @include screen-md-max {
+      float: left;
+      margin-right: 40px;
+    }
+  }
+
+  &__text {
+    flex-basis: 60%;
+    margin: 0 0 0 20px;
+    line-height: 38px;
+    font-size: 1.2em;
+
+    @include screen-md-max {
+      margin-left: 0;
+    }
+  }
+
+  &__image {
+    background-color: #fff;
+    height: 300px;
+    padding: 0 0 14px 14px;
+  }
+}

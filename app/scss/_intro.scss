@@ -5,12 +5,17 @@
   display: flex;
   flex-direction: column;
 
-  &__text-positioner {
+  &__text-wrapper {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__text-positioner {
     padding-right: 17%;
 
     @include screen-sm-max {
