@@ -43,6 +43,10 @@
     @include screen-lg-max {
       padding-left: 50px;
     }
+
+    @include screen-xs-max {
+      padding-left: 20px;
+    }
   }
 
   &__list-el {

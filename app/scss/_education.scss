@@ -2,10 +2,35 @@ $border-width: 9px;
 $line-to-border: 40px;
 
 .education {
-  &__wrapper {
+  &__section {
     line-height: 19px;
     background-color: $primary-color;
     color: $secondary-color;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: $border-width;
+      width: 200%;
+      background-color: $secondary-color;
+      top: 10px;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+
+      @include screen-sm-max {
+        width: $border-width;
+        height: 200%;
+        left: -10px;
+        right: 0;
+        top: initial;
+      }
+    }
+  }
+
+  &__wrapper {
     display: flex;
     width: 100%;
     padding-left: 0;
@@ -55,16 +80,12 @@ $line-to-border: 40px;
       height: initial;
       width: 50%;
       padding: 20px 0;
+      display: flex;
+      align-items: center;
     }
 
     &.is-upper-row {
-      border-bottom: $border-width solid $secondary-color;
       position: relative;
-
-      @include screen-sm-max {
-        border-bottom: none;
-        border-left: $border-width solid $secondary-color;
-      }
 
       &:after {
         content: '';
@@ -77,6 +98,7 @@ $line-to-border: 40px;
         left: 0;
         right: 0;
         margin: auto;
+        z-index: 1;
 
         @include screen-sm-max {
           top: 0;
@@ -113,9 +135,16 @@ $line-to-border: 40px;
       padding-bottom: $line-to-border;
 
       @include screen-sm-max {
-        padding-bottom: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
         padding-left: $line-to-border;
         align-items: center;
+      }
+    }
+
+    &.is-lower-row {
+      @include screen-sm-max {
+        justify-content: flex-end;
       }
     }
 
@@ -123,10 +152,12 @@ $line-to-border: 40px;
       padding-top: $line-to-border;
 
       @include screen-sm-max {
-        padding-top: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
         padding-right: $line-to-border;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
       }
     }
   }
