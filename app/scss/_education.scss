@@ -3,6 +3,7 @@ $line-to-border: 40px;
 
 .education {
   &__wrapper {
+    line-height: 19px;
     background-color: $primary-color;
     color: $secondary-color;
     display: flex;
@@ -13,8 +14,6 @@ $line-to-border: 40px;
     @include screen-sm-max {
       display: block;
       padding: 0 20px;
-      font-size: 14px;
-      line-height: 19px;
     }
   }
 
@@ -115,6 +114,7 @@ $line-to-border: 40px;
 
       @include screen-sm-max {
         padding-bottom: 0;
+        padding-left: $line-to-border;
         align-items: center;
       }
     }
@@ -124,6 +124,7 @@ $line-to-border: 40px;
 
       @include screen-sm-max {
         padding-top: 0;
+        padding-right: $line-to-border;
         display: flex;
         align-items: center;
       }
@@ -140,6 +141,9 @@ $line-to-border: 40px;
       padding-left: $line-to-border;
       padding-bottom: 0;
       margin: 0;
+      height: auto;
+      width: 100%;
+      max-width: 200px;
     }
   }
 
