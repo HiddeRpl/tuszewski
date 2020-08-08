@@ -1,4 +1,8 @@
 .services {
+  $hexagon-width: 110px;
+  $hexagon-border: 75px;
+  $hexagon-side-border: 35px;
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -61,6 +65,96 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__hexagon {
+    width: $hexagon-width;
+    height: $hexagon-border * 2;
+    background-color: #ecf0f1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: $hexagon-border solid transparent;
+      border-bottom: $hexagon-border solid transparent;
+      margin: auto;
+    }
+
+    &:before {
+      left: -($hexagon-side-border);
+      border-right: $hexagon-side-border solid #ecf0f1;
+    }
+
+    &:after {
+      right: -($hexagon-side-border);
+      border-left: $hexagon-side-border solid #ecf0f1;
+    }
+
+    &.is-criminal {
+      background-image: url(../images/criminal-icon.png);
+    }
+
+    &.is-civil {
+      background-image: url(../images/civil-icon.png);
+    }
+  }
+
+  &__trapezoid {
+    text-align: center;
+    height: $hexagon-border;
+    width: $hexagon-width;
+    position: relative;
+    background-color: $primary-color;
+    color: #ecf0f1;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border-top: $hexagon-border solid $primary-color;
+    }
+
+    &:before {
+      left: -$hexagon-side-border;
+      border-left: $hexagon-side-border solid transparent;
+    }
+
+    &:after {
+      right: -$hexagon-side-border;
+      border-right: $hexagon-side-border solid transparent;
+    }
+
+    &.is-opposite {
+      display: flex;
+      align-items: flex-end;
+
+      &:before,
+      &:after {
+        border-top: 0;
+        border-bottom: $hexagon-border solid $primary-color;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+  }
+
+  &__law-wrapper {
+    margin-right: $hexagon-side-border + 10;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

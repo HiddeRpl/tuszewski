@@ -83,4 +83,8 @@ a:focus {
     font-size: 2em;
     text-transform: uppercase;
   }
+
+  &.is-dark {
+    background-color: $primary-color;
+  }
 }
