@@ -163,10 +163,14 @@
 
     @include screen-md-max {
       height: $hexagon-border-mobile * 2;
-      width: $hexagon-width-mobile;
+      width: $hexagon-width-mobile + 20;
       display: flex;
       align-items: center;
       padding: 0 10px;
+    }
+
+    @include screen-xs-max {
+      width: $hexagon-width-mobile;
     }
 
     &:before,
@@ -213,8 +217,8 @@
 
     @include screen-md-max {
       flex-direction: column;
-      padding: 0;
       align-items: center;
+      padding: $hexagon-border-sharpness-mobile 0 0;
     }
   }
 
@@ -238,13 +242,21 @@
 
     &:nth-child(odd) {
       @include screen-md-max {
+        margin-left: $hexagon-width-mobile / 2 + 20;
+      }
+
+      @include screen-xs-max {
         margin-left: $hexagon-width-mobile / 2;
       }
     }
 
     &:nth-child(even) {
       @include screen-md-max {
-        margin-left: -($hexagon-width-mobile) / 2;
+        margin-left: -($hexagon-width-mobile / 2 + 20);
+      }
+
+      @include screen-xs-max {
+        margin-left: -($hexagon-width-mobile / 2);
       }
     }
   }
