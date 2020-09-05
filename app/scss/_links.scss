@@ -1,0 +1,110 @@
+.links {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__half {
+    display: flex;
+    flex-basis: 50%;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @include screen-md-max {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+    padding: 14px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8em;
+  }
+
+  &__el {
+    display: block;
+    height: 150px;
+    width: 31%;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    transition-property: box-shadow, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    &:hover:not(.no-hover) {
+      transform: scale(1.1);
+      box-shadow: 2px 2px 20px 0px #b7b7b7;
+    }
+
+    @include screen-xs-max {
+      height: 120px;
+      width: 48%;
+    }
+
+    &.is-appeal {
+      background: url(../images/sad_apelacyjny.png) center/cover no-repeat;
+    }
+
+    &.is-district {
+      background: url(../images/sad_okregowy.png) center/cover no-repeat;
+    }
+
+    &.is-district-old {
+      background: url(../images/sad_rejonowy_stare.png) center/cover no-repeat;
+    }
+
+    &.is-town {
+      background: url(../images/urzad_miasta.png) center/cover no-repeat;
+    }
+
+    &.is-empty-dark {
+      background: $primary-color center/cover no-repeat;
+
+      @include screen-md-max {
+        order: 1;
+      }
+    }
+
+    &.is-empty-red {
+      background: $accent-color center/cover no-repeat;
+
+      @include screen-md-max {
+        order: -1;
+      }
+    }
+
+    &.is-province {
+      background: url(../images/wlkp_urzad.png) center/cover no-repeat;
+    }
+
+    &.is-district-grunwald {
+      background: url(../images/sad_rejonowy_grunwald.png) center/cover no-repeat;
+    }
+
+    &.is-district-old {
+      background: url(../images/sad_rejonowy_stare.png) center/cover no-repeat;
+    }
+
+    &.is-district-new {
+      background: url(../images/sad_rejonowy_nowe.png) center/cover no-repeat;
+    }
+
+    &.is-ministry {
+      background: url(../images/ministerstwo.png) center/cover no-repeat;
+    }
+
+    &.is-humanitarian {
+      background: url(../images/akcja_humanitarna.png) center/cover no-repeat;
+    }
+
+    &.is-kennedy {
+      background: url(../images/kennedy.png) center/cover no-repeat;
+    }
+  }
+}

@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
 
+  @include screen-sm-max {
+    background-position-x: 40%;
+  }
+
   &__text-wrapper {
     flex: 1 1 auto;
     display: flex;
